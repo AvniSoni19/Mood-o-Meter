@@ -41,10 +41,10 @@ def main():
 
     # Ask user for their mood
     user_mood = st.text_input("How are you feeling today? Please describe your mood:")
-
-    # Check mood and show results when user clicks the button
-    if st.button("Check Mood"):
-        mood_o_meter(user_mood, activities)
+    if user_mood != "":
+        # Check mood and show results when user clicks the button
+        if st.button("Check Mood"):
+            mood_o_meter(user_mood, activities)
 
 # Run the Streamlit app
 if __name__ == "__main__":
